@@ -1,0 +1,6 @@
+
+body{
+  height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(45deg,#111212 0%,#ebf9f9 100%);
+}
