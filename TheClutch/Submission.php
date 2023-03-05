@@ -51,7 +51,7 @@
       }
 
       ?>
-      <form method="post" action="Submission.php">
+      <form method="post" action="Submission.php" enctype="multipart/form-data">
 
 
       <div class="form-group">
@@ -62,24 +62,24 @@
 
          <div class="form-group">
             <label>Username</label>
-            <input type="text" class="form-control" placeholder="Enter your Username." name="username">
+            <input type="text" class="form-control" placeholder="What's your Username?" name="username">
          </div>
 
          <div class="form-group">
             <label>Email</label>
-            <input type="email" class="form-control" placeholder="Enter your Email Adress." name="email">
+            <input type="email" class="form-control" placeholder="What's your Email Adress?" name="email">
          </div>
 
 
          <div class="form-group">
             <label>Title</label>
-            <input type="text" class="form-control" placeholder="Enter the car's name." name="title">
+            <input type="text" class="form-control" placeholder="What's the title?" name="title">
          </div>
 
 
          <div class="form-group">
             <label>Image</label>
-            <input type="file" class="form-control" placeholder="Enter the car's Brand." name="image">
+            <input type="file" class="form-control" placeholder="Submit and Image" name="image">
 
          </div>
 

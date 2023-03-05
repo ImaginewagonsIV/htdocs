@@ -4,7 +4,7 @@
 <head>
    <meta charset="utf-8">
    <title>Gallery</title>
-   <link rel="stylesheet" href="gallerystyle.css">
+   <link rel="stylesheet" href="gallery.css">
    <link rel="stylesheet" href="stylesheet.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,6 +35,8 @@
    $sql = "Select * from `submission_tbl`";
    $result = mysqli_query($con, $sql);
 
+
+   echo '<div class="post_container">';
    while ($row =  mysqli_fetch_assoc($result)) {
 
       $name = $row['Username'];
@@ -42,30 +44,22 @@
       $title = $row['Title'];
       $image = $row['Image'];
       $post_description = $row['Post_description'];
+      echo $image;
+      echo '
+      <div class="parent-div">
+      
+         <div class="content">
+         <img src="data:image/jpeg;base64,'.base64_encode($image).'"/>
+            <p> A place to showcase your Artistic side </p>
+         </div>
 
-      echo $name;
-      echo '<br>';
-      echo $email;
-      echo '<br>';
-      echo $title;
-      echo '<br>';
-      echo '<img src="data:image/jpeg;base64,' . base64_encode($image) . '"/>';
-      echo '<br>';
-      echo $post_description;
+      </div>';
+
    }
+   echo '<a href="remove.php">Remove </a>';
+   echo '</div>';
    ?>
-   <a href="remove.php">Remove </a>
-
-   <h1>Test</h1>
-   
-   <div class="parent-div">
-      <h1>Test</h1>
-      <div class="container">
-         <h1>test</h1>
-      </div>
-   </div>
-
-
+ 
 
 </body>
 
